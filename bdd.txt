@@ -1,0 +1,48 @@
+bijou bdd
+
+oderdetails
+____________
+id           int 
+order_id     int
+product_id   int  
+total_price  double   
+quantity     int      
+
+order
+_____________
+id            int    
+totalAmount   double        
+dateCreation  datetime        
+user_id       int      
+status        var10      
+
+products
+_____________
+id            int          
+name          var60         
+description   text            
+price         double          
+url           var90       
+quantity      int               
+dateCreation  datetime             
+
+users
+_____________
+id            int     
+firstName     var60    
+lastName      var60         
+email         var90     
+password      var120             
+role          var15      
+address       var60         
+zip           int5      
+city          var40     
+phone         var15        
+dateCreation  datetime             
+connexion     datetime        
+
+prospect
+_______________
+id            int
+email         var90
+dateCreation  datetime

@@ -1,0 +1,568 @@
+@font-face {
+  font-family: "Bentham-Regular";
+  src: url("assets/fonts/Bentham-Regular.ttf") format("ttf"),     
+ }
+@font-face {
+  font-family: "Bentham";
+  src: url("assets/fonts/Bentham.otf") format("ttf"),     
+}
+@font-face {
+  font-family: "Puritan";
+  src: url("assets/fonts/Puritan.ttf") format("ttf"),     
+}
+@font-face {
+  font-family: "PuritanAlternate-Bold";
+  src: url("assets/fonts/PuritanAlternate-Bold.ttf") format("ttf"),     
+ }
+@font-face {
+  font-family: "PuritanSwash-Bold";
+  src: url("assets/fonts/PuritanSwash-Bold.ttf") format("ttf"),     
+}
+/* voir les div */
+/*
+div {
+  background-color: #6559ca;
+  border: 1px solid;
+  border-color: #ffffff;
+}
+*/
+
+/*Mobile first */
+/* GLOBAL */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.page { /* permet un sticky footer parfaitement operationnel sur toutes les pages */
+  min-height: 40vw;
+  padding-bottom: 5em;
+}
+h2, h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: #000000;
+  font-family: "Bentham";
+}
+h3 {
+  font-size: 2em;
+  text-align: center;
+  color: #000000;
+  font-family: "Bentham";
+}
+h4{
+  font-size: 1.5em;
+  text-align: center;
+  color: #000000;
+  font-family: "Bentham-Regular";
+}
+.page p {
+  font-size: 1.3em;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-family: "Puritan";
+}
+.errorMsg{
+  color: red;
+}
+.underline:hover {
+  text-decoration: underline;
+  font-style: oblique 10deg;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.button, button{
+  font-family: "Bentham-Regular";
+  border: solid 1px #ffffff;
+}
+/* Header */
+.header-nav{
+  background-color:#81D8D0;
+}
+.header-nav img{
+  width: 12em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-barre {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B7CECB;
+}
+.nav-barre li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1em 1em;
+  text-decoration: none;
+  float: right;
+  border-right: 1px solid #bbb;
+}
+.nav-barre li a:hover {
+  background-color: #81D8D0;
+  color: #000000;
+}
+.nav-barre li a:active {
+  background-color:#51C0B9;
+}
+/*Home*/
+.Home-header{
+  width: 100%;
+  margin: auto;
+}
+.customer-cadeau{
+  width: 50%;
+  max-height: 30em;
+	height: auto;
+  float: right;
+}
+div .rdv{
+  display: inline-block;
+  width: 45%;
+  }
+  .main h3{
+    margin-top: 1em;
+  }
+  div .list{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 2em;
+  }
+  .list img{
+    width: 40%;
+  }
+.list p{
+  width: 50%;
+}
+/* PRODUCTS */
+.bijou-product{
+  width: 100%;
+  margin: auto;
+}
+.product-mosaic {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  vertical-align: top;
+  border: 2px solid#81D8D0;
+  margin-top: 2em;
+}
+.page ul{
+  padding-left: 0;
+}
+.product-mosaic:hover {
+  border: 2px solid#000000;
+}
+.product-mosaic .product-img {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+.product-mosaic a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.product-mosaic form input {
+  text-align: center;
+  width: 4em;
+  height: 2em;
+  margin: 1em;
+  padding: 0;   
+}
+.addToBasket {
+  display: flex;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1em;
+  width: 90%;
+  height: 8em;
+  margin: auto; 
+}
+.addToBasket p{
+  padding-right:1%;
+  width: auto;
+  max-width: 90%;
+  margin:auto
+}
+.addToBasket p.price{
+  margin-left: 5%;
+  white-space:nowrap;
+} 
+.addToBasket p.bouton-achat{
+  margin-right: 5%;
+}
+.addToBasket:hover {
+  background-color: #81D8D0;
+  color: #000000;
+  cursor: pointer;
+  transition-delay: 100ms;
+}
+/*EditProduct*/
+.retour{
+  font-size: 2em;
+  margin-left: 1em;
+}
+.bijouDetail{
+  text-align: center;
+}
+.bijouDetail .addToBasket{
+  width: 50%;
+}
+.bijouDetail form input {
+  text-align: center;
+  width: 4em;
+  height: 2em;
+  margin: 1em;
+  padding: 0;   
+}
+/*Pop-Up */
+.blocNoir{
+  background: rgba(136, 130, 130, 0.4);
+  position: fixed; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: 9999 !important;
+}
+.popUp {
+  border: 2px solid  #81D8D0;
+  border-radius: 2em;
+  position: absolute;
+  top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: white;
+  text-align: center;
+  padding: 1em 2em;
+}
+.popUp p{
+  width: 100%;
+}
+.popUp img {
+  margin: auto;
+  padding-bottom: 1em;
+  width: 50%; 
+}
+.popUp .popUp-msg {
+  color: #51C0B9;
+}
+.bouton-align{
+  width: 100%;
+  display:inline-block;
+}
+.popUp .button{
+  vertical-align: top;
+  background-color: #000000;
+  color: #ffffff;
+  width:48%;
+  height: 10em;
+  margin: 1%;
+}
+.popUp .button:hover {
+  background-color: #81D8D0;
+  color: #000000;
+  cursor: pointer;
+  transition-delay: 100ms;
+} 
+.popUp .fa-arrow-circle-left, .popUp .fa-arrow-circle-right {
+  font-size: 2em;
+  text-align: bottom;
+} 
+/*FAQ*/
+.faq-cover{
+  width: 100%;
+  margin: auto;
+}
+/* ADMIN */
+.addProduct{
+  background-color: #000000;
+  color: #ffffff;
+  width: 15em;
+  height: 4em;
+  display: block;
+  margin : auto;
+  margin-bottom: 1em;
+}
+.addProduct:hover{
+  background-color: #81D8D0;
+  color: #000000;
+  cursor: pointer;
+}
+.tableBijou {
+  border:3px solid #81D8D0;
+  border-collapse:collapse;
+  width:100%;
+  margin:auto;
+}
+.tableBijou tbody {
+  border:1px solid #050505;
+}
+.tableBijou td {
+  text-align:center;
+  border:1px solid #81D8D0;
+
+}
+.tableBijou img{
+  width: 100%;
+}
+.bold{
+  font-weight: bold;
+}
+.tableBijou .button {
+  background-color: #000000;
+  color: #ffffff;
+  width: 6em;
+  height: 3em;
+}
+.tableBijou .button:hover {
+  background-color: #81D8D0;
+  color: #000000;
+  cursor: pointer;
+}
+.tableBijou p{
+  overflow: hidden;
+}
+/* PROFIL + AddBijou*/
+.formulaire {
+  width: 60%;
+  margin: auto;
+  background-color: #51C0B9;
+  border-radius: 12px;
+  padding: 1em 2% 2em 2%;
+}
+.formulaire input {
+  font-family: "PuritanAlternate-Bold";
+  font-size: 1.2em;
+  display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  height: 3em;
+  border-radius: 1.5em;
+  border: 1px solid #81D8D0;
+  padding-left: 7%;
+  outline: none;
+}
+.formulaire textarea {
+  font-family: "PuritanAlternate-Bold";
+  font-size: 1.2em;
+  display: block;
+  min-width: 90%;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  min-height: 7em;
+  border-radius: 1.5em;
+  border: 1px solid #81D8D0;
+  padding-left: 7%;
+  outline: none;
+} 
+.formulaire .button {
+  background-color: #000000;
+  color: #ffffff;
+  display: block;
+  margin : auto;
+  width: 10em;
+  height: 3em;
+  margin-top: 2em;
+}
+.formulaire .button:hover {
+  background-color: #81D8D0;
+  color: #000000;
+  cursor: pointer;
+}
+/* BASKET */ 
+.basketTable {
+	border-spacing: 0px;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+}
+.basketTable th {
+  background-color: #81D8D0;
+  width: 19%;
+  height: 3em;
+}
+.basketTable td {
+  border-top: 1px solid black;
+  width: 19%;
+  height: 3em;
+}
+.trash-bijou{
+  border-radius: 1em;
+  background-color:#000000;
+  color: white;
+  font-size: 1.5em;
+}
+.check-out {
+  border-radius: 1em;
+  background-color: #000000;
+  color: white;
+  font-size: 1.5em;
+  margin-top: 5%;
+}
+.trash-bijou:hover, .check-out:hover {
+  background-color: #81D8D0;
+  color: #000000;
+  cursor: pointer;
+}
+.basket-banner{
+  padding-top: 10%;
+}
+/*Footer*/
+.footer {
+  border-top: 1em solid #81D8D0;
+  border-right: 0.5em solid #81D8D0;
+  border-left: 0.5em solid #81D8D0;
+}
+.footer ul {
+  list-style-type : none;
+  padding-left: 0;
+}
+.footer .col1 {
+  width: 100%;
+  text-align: center;
+}
+.footer .col1 li{
+  margin-bottom: 0.5em;
+}
+.footer .col2 {
+  width: 100%;
+  text-align: center;
+}
+.footer .col3 {
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+}
+.footer img {
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer .social{
+  display:inline-block; 
+  width:100%; 
+  text-align:center;
+}
+.mosaique {
+  font-size: 2em;
+  padding-left: 0;
+}
+.mosaique li {
+  display: inline;
+}
+.twitter, .facebook, .youtube, .instagram {
+  font-size: 2em;
+  margin:1%;
+}
+.instagram {
+  border-radius: 30%;
+  height: 90%;
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+/* VERSION TABLETTE */
+@media screen and (min-width: 767px) {
+  /*General*/
+  html {
+    font-size: 80%;
+  }
+  /*Home */
+.container{
+  position: relative;
+}
+.container .home-text {
+  position: absolute;
+  top: 1%;
+  color: rgb(0, 0, 0);
+  width: 30%;
+}
+div .rdv{
+  height:30em;
+}
+.main {
+  text-align: center;
+}
+div .list{
+  width:45%;
+}
+.list img{
+  width: 40%;
+}
+.page p {
+  width:80%;
+}
+/* PRODUCTS */
+.product-text{
+  margin-left: 25%;
+  position: absolute;
+  top: 1%;
+  color: rgb(0, 0, 0);
+  width: 30%;
+}
+.product-ul{
+  text-align: center;
+}
+.product-mosaic {
+  width: 45%;
+  padding: 1em 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 2em;
+}
+/*FAQ*/
+.faq-text{
+  margin-top: 5%;
+  position: absolute;
+  top: 1%;
+  color: rgb(0, 0, 0);
+  width: 25%;
+}
+/*Admin*/
+.tableBijou{
+  width: 90%;
+}
+.tableBijou td {
+  padding:0.5em;
+}
+/*Footer*/
+.footer .col1 {
+  width: 45%;
+  float: left;
+}
+.footer .col1 ul {
+  padding-left:3em;
+}
+.footer .col1 ul, .footer .col1 h4{
+  text-align: left;
+}
+.footer .col2 {
+  width: 45%;
+  float: right;
+  text-align: center;
+}
+}
+/* VERSION DESKTOP */
+@media screen and (min-width:1024px) {
+  /*General*/
+  html {
+    font-size: 100%;
+  }
+}
